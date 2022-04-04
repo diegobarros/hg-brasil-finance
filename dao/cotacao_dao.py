@@ -7,6 +7,10 @@ class CotacaoDAO(ABC):
     def adicionar(self, cliente):
         pass
 
+    @abstractmethod
+    def selecionar_cotacao(self, limit=10) -> list:
+        pass
+
 #    @abstractmethod
 #    def excluir(self, id):
 #        pass

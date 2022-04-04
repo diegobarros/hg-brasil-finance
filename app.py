@@ -24,3 +24,5 @@ if __name__ == '__main__':
 
     c = consultar_dados_financeiros(url_base)
     cotacaoDAO.adicionar(c)
+    info = cotacaoDAO.selecionar_cotacao()
+    print(info)
