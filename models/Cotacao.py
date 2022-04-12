@@ -1,10 +1,15 @@
 class Cotacao:
 
-    def __init__(self, dolar: float, euro: float, data_hora: str) -> None:
+    def __init__(self, id: int = -1,  dolar: float = 0.0, euro: float = 0.0, data_hora: str = "") -> None:
         super().__init__()
+        self.__id = id
         self.__dolar = dolar
         self.__euro = euro
         self.__data_hora = data_hora
+
+    @property
+    def id(self):
+        return self.__id
 
     @property
     def dolar(self):
@@ -27,7 +32,7 @@ class Cotacao:
         }
 
     def __str__(self) -> str:
-        return f'Data: {self.__data_hora}, Dólar: $ {self.__dolar}, Euro: € {self.__euro}'
+        return f'{self.__data_hora}, $ {self.__dolar}, € {self.__euro}'
 
 
 
